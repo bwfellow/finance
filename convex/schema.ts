@@ -47,6 +47,16 @@ const applicationTables = {
     .index("by_user_type_and_month", ["userId", "type", "month"])
     .index("by_plaid_transaction_id", ["plaidTransactionId"]),
 
+  incomeEntries: defineTable({
+    userId: v.id("users"),
+    description: descriptionValidator,
+    amount: amountValidator,
+    month: monthValidator,
+    date: dateValidator,
+  })
+    .index("by_user_and_month", ["userId", "month"])
+    .index("by_user", ["userId"]),
+
   plaidItems: defineTable({
     userId: v.id("users"),
     itemId: v.string(),
