@@ -16,6 +16,8 @@ import type * as categories_model from "../categories/model.js";
 import type * as categoryBudgets_functions from "../categoryBudgets/functions.js";
 import type * as categoryBudgets_model from "../categoryBudgets/model.js";
 import type * as http from "../http.js";
+import type * as income_functions from "../income/functions.js";
+import type * as income_model from "../income/model.js";
 import type * as plaid_actions from "../plaid/actions.js";
 import type * as plaid_plaidClient from "../plaid/plaidClient.js";
 import type * as plaid_queries from "../plaid/queries.js";
@@ -43,6 +45,8 @@ declare const fullApi: ApiFromModules<{
   "categoryBudgets/functions": typeof categoryBudgets_functions;
   "categoryBudgets/model": typeof categoryBudgets_model;
   http: typeof http;
+  "income/functions": typeof income_functions;
+  "income/model": typeof income_model;
   "plaid/actions": typeof plaid_actions;
   "plaid/plaidClient": typeof plaid_plaidClient;
   "plaid/queries": typeof plaid_queries;
